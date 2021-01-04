@@ -1,2 +1,4 @@
 node_modules/
 sample/
+src/public/styles/*.css
+src/public/styles/*.map

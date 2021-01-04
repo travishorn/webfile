@@ -1,5 +1,6 @@
 const path = require("path");
 const express = require("express");
+const sassMiddleware = require("node-sass-middleware");
 const loadConfig = require("./loadConfig.js");
 const getFiles = require("./getFiles.js");
 
@@ -17,10 +18,15 @@ loadConfig("../webfile.config.json", (err, config) => {
   app.locals.title = config.title;
 
   app.use(
-    "/_static/styles",
-    express.static(path.join(__dirname, "public/styles"))
+    sassMiddleware({
+      src: path.join(__dirname, "public"),
+      dest: path.join(__dirname, "public"),
+      indentedSyntax: false,
+      sourceMap: true,
+    })
   );
 
+  app.use(express.static(path.join(__dirname, "public")));
   app.use("/_static/files", express.static(config.serveDirectory));
 
   app.get("/:dirPath*?", (req, res) => {
