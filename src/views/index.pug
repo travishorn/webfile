@@ -1,0 +1,46 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+
+    link(rel="preconnect" href="https://fonts.gstatic.com")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap")
+    link(rel="stylesheet" href="//cdn.jsdelivr.net/gh/dmhendricks/file-icon-vectors@1.0/dist/file-icon-square-o.min.css")
+    link(rel="stylesheet" href="/_static/styles/style.css")
+
+    title= title
+  body
+    .container
+      h1= title
+      table
+        tbody
+          if showParent
+            tr
+              td.icon
+                span.fiv-sqo.fiv-icon-folder
+              td.name
+                a(href="../")
+                  strong Parent Directory
+              td.modified
+              td.size
+          each file in files
+            if file.type === "file"
+              tr
+                td.icon
+                  if file.iconSupported
+                    span(class=`fiv-sqo fiv-icon-${file.extension}`)
+                  else
+                    span.fiv-sqo.fiv-icon-blank
+                td.name
+                  a(href=`/_static/files/${file.path}`)&attributes(file.nameTruncated ? { title: file.fullName } : {})= file.name
+                td.modified= file.modified
+                td.size= file.size
+            if file.type === "directory"
+              tr
+                td.icon
+                  span.fiv-sqo.fiv-icon-folder
+                td.name
+                  a(href=`/${file.path}/`)&attributes(file.nameTruncated ? { title: file.fullName } : {})= file.name
+                td.modified= file.modified
+                td.size

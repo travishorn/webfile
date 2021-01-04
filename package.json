@@ -1,0 +1,30 @@
+{
+  "name": "webfile",
+  "version": "1.0.0",
+  "description": "Serve static files in a directory with a web user interface.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint **/*.js",
+    "lint:fix": "eslint --fix **/*.js",
+    "start": "node src/index"
+  },
+  "keywords": [],
+  "author": "Travis Horn (https://travishorn.com)",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^7.17.0",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-prettier": "^3.3.0",
+    "prettier": "^2.2.1"
+  },
+  "dependencies": {
+    "async": "^3.2.0",
+    "date-fns": "^2.16.1",
+    "express": "^4.17.1",
+    "filesize": "^6.1.0",
+    "joi": "^17.3.0",
+    "lodash": "^4.17.20",
+    "pug": "^3.0.0"
+  }
+}

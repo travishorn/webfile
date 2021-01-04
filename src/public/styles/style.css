@@ -1,0 +1,55 @@
+html {
+  font-size: 20px
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 80%;
+  max-width: 960px;
+  margin: 3rem auto;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(21, 103, 255);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 0.4rem;
+  border-bottom: solid 1px #F0F0F0;
+}
+
+td:first-child {
+  padding-left: 0;
+}
+
+td:last-child {
+  padding-right: 0;
+  text-align: right;
+}
+
+.modified,
+.size {
+  color: #565656;
+  font-size: 0.8rem;
+}
+
+.icon {
+  width: 30px;
+}
+
+.modified {
+  width: 60px;
+}
+
+.size {
+  width: 60px;
+}

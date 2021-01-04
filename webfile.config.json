@@ -1,0 +1,6 @@
+{
+  "port": 3000,
+  "serveDirectory": "D:\\Development",
+  "title": "Browse Files",
+  "truncateNamesAt": 50
+}
