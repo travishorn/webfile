@@ -48,6 +48,17 @@ The text that will appear in the title bar and the header of the page.
 
 If a file or directory name is too long, it may cause the page to look bad. Names over this value will be truncated. An ellipse will be appended and the full name will be viewable by hovering over the truncated name.
 
+### Themes
+
+Webfile is packaged with two themes: classic and dark. You can switch the theme by editing `src/public/styles/index.scss`.
+
+```
+@import 'theme-classic';
+// @import 'theme-dark';
+```
+
+To switch themes, uncomment the one you want to use.
+
 ## Deployment
 
 Start the server
