@@ -2,6 +2,8 @@
 
 Serve static files in a directory with a web user interface.
 
+![Demo](webfile-demo.gif)
+
 ## Installation
 
 Make sure you have [Node.js](https://nodejs.org) installed.
